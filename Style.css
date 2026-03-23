@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Body */
+body {
+    font-family: 'Lato', system-ui, -apple-system, sans-serif;
+    background-color: #FAF9F6;
+    /* Off-white for luxury feel */
+    color: #333333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+}
+
+/* Header */
+header {
+    background-color: #FAF9F6;
+    /* Solid light background */
+    color: #4A5D23;
+    /* Dark olive for text */
+    padding: 20px 40px;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Space out logo and nav if we have logo */
+    position: relative;
+    z-index: 1000;
+    border-bottom: 1px solid #E5E0D8;
+}
+
+header .logo img {
+    width: 120px;
+}
+
+header nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #4A5D23;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #C5A880;
+    /* Muted gold highlight */
+}
+
+/* Hero Section */
+#hero {
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    /* Optional: background-attachment: fixed; for parallax effect, but leaving local as requested */
+    background-attachment: local;
+    height: 70vh;
+    /* Better proportion */
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Add a subtle overlay to the hero so text is readable without heavy shadows */
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+#hero .hero-text {
+    position: relative;
+    z-index: 2;
+    color: #FAF9F6;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+#hero .hero-text h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+#hero .hero-text p {
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Buttons (Global) */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: transparent;
+    color: #C5A880;
+    /* Gold text */
+    border: 1px solid #C5A880;
+    /* Gold border */
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+}
+
+.btn:hover {
+    background-color: #C5A880;
+    /* Gold bg on hover */
+    color: #FAF9F6;
+    /* White text on hover */
+}
+
+.btn-solid {
+    background-color: #C5A880;
+    /* Gold bg */
+    color: #FAF9F6;
+    /* White text */
+    border: 1px solid #C5A880;
+    /* Gold border */
+}
+
+.btn-solid:hover {
+    background-color: transparent;
+    color: #C5A880;
+    /* Gold text on hover */
+}
+
+.btn-light {
+    color: #FAF9F6;
+    border-color: #FAF9F6;
+}
+
+.btn-light:hover {
+    background-color: #FAF9F6;
+    color: #4A5D23;
+}
+
+
+/* Common Section Styles */
+section {
+    padding: 80px 20px;
+    background-color: #FAF9F6;
+}
+
+section.dark-section {
+    background-color: #AEB877;
+    /* Light Sage Green */
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Overriding old section.container specific class to be more elegant */
+section .container h2 {
+    color: #4A5D23;
+    font-size: 2.5em;
+    font-weight: 400;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+section .container h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #555;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Specific Sections overrides based on new design */
+
+/* Description / About Section */
+.description {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #FAF9F6;
+    /* Clean background */
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.description h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.description a.btn {
+    margin-top: 30px;
+}
+
+
+hr {
+    margin: 40px auto;
+    border: none;
+    border-top: 1px solid #C5A880;
+    /* Muted gold separator */
+    width: 60px;
+    /* Small elegant separator */
+}
+
+
+/* Room Carousel Section inside Index */
+.room-track h2 {
+    color: #4A5D23;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.room-track h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #555;
+    line-height: 1.6;
+}
+
+.iniziocam {
+    background-color: transparent;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.iniziocam h2 {
+    color: #FAF9F6;
+    /* For when this is over a dark image background */
+    font-size: 2.5em;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    /* Keep subtitle legible if bg is busy */
+}
+
+.iniziocam h3 {
+    color: #FAF9F6;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Carousel Overrides inside inline styles will remain, but we can refine base elements */
+.room-window {
+    background: #FAF9F6 !important;
+    /* Off-white card */
+    border: 1px solid #C5A880;
+    /* Muted gold border */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+.room-window h2 {
+    color: #4A5D23;
+    margin-top: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #AEB877;
+    /* Light Sage Green */
+    color: #4A5D23;
+    /* Dark Olive text */
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Services Page Enhancements (Secondary Pages) */
+.service-description p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.service-list li {
+    margin-bottom: 30px;
+}
+
+.service-list li strong {
+    color: #4A5D23;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.service-list li p {
+    color: #555;
+    font-weight: 300;
+    font-size: 0.95rem;
+}
